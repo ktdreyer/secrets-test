@@ -1,0 +1,14 @@
+name: "test"
+
+on: [push, pull_request]
+  
+env:
+  SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: |
+          env
